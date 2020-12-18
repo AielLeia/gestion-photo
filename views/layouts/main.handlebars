@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+            integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+            integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <style>
+            .collapse-content .fa.fa-heart:hover {
+                color: #f44336 !important;
+            }
+
+            .collapse-content .fa.fa-share-alt:hover {
+                color: #0d47a1 !important;
+            }
+        </style>
+        <title>Document</title>
+    </head>
+
+    <body class="d-flex flex-column h-100">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
+            <a class="navbar-brand" href="{{#base_url '/'}}{{/base_url}}">PhotoGraphy</a>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link active" href={{#base_url '/'}}{{/base_url}}>
+                        Accueil
+                    </a>
+                    <a class="nav-item nav-link active" href={{#base_url '/galery'}}{{/base_url}}>
+                        Galérie
+                    </a>
+                    {{#if user.row.id}}
+                        <a href="{{#base_url '/dashboard' }}{{/base_url}}"
+                            class="nav-item nav-link active">Dashborard</a>
+                        <a href="{{#base_url '/table'}}{{/base_url}}" class="nav-item nav-link active">Photos
+                            postées</a>
+                    {{/if}}
+                </div>
+            </div>
+            {{#if (not user.row.id)}}
+                <a href="{{#base_url '/login'}}{{/base_url}}" class="btn btn-primary my-2 my-sm-0">Connexion</a>
+            {{else}}
+                <a href="{{#base_url '/logout'}}{{/base_url}}" class="btn btn-primary my-2 my-sm-0">Deconnexion</a>
+            {{/if}}
+        </nav>
+
+        <div class="container">
+
+            {{{ body }}}
+
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+            integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+            crossorigin="anonymous"></script>
+        <script src="/assets/js/main.js"></script>
+        <footer class="bg-info py-2 footer mt-auto">
+            <div class="container text-white">
+                Copyrigth. Ismaël MOHAMED BOUH
+            </div>
+        </footer>
+    </body>
+
+</html>

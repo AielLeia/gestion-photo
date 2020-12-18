@@ -1,0 +1,19 @@
+{
+    "files": [
+        "reactjs/main.tsx"
+    ],
+    "compilerOptions": {
+        "target": "es5",
+        "module": "ES2015",
+        "moduleResolution": "node",
+        "sourceMap": true,
+        "strict": true,
+        "allowJs": true,
+        "jsx": "react",
+        "allowSyntheticDefaultImports": true
+    },
+    "exclude": [
+        "node_modules",
+        "src"
+    ]
+}

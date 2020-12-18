@@ -1,0 +1,35 @@
+<div class="border rounded card">
+    <div class="card-header">
+        <h1>Login</h1>
+    </div>
+    <div class="card-body">
+        {{#if error}}
+            <div class="alert alert-danger">
+                {{error}}
+            </div>
+        {{/if}}
+        <form class="m-4" action="http://localhost:3000/login" method="post">
+            <div class="form-group">
+                <label for="username">Pseudo</label>
+                <input type="text" class="form-control {{#if username}}is-invalid{{/if}}" id="username" name="username"
+                    value="{{usernameData}}">
+                {{#if username}}
+                    <div class="invalid-feedback">
+                        {{username}}
+                    </div>
+                {{/if}}
+            </div>
+            <div class="form-group">
+                <label for="password">Mot de passe</label>
+                <input type="password" class="form-control {{#if password}}is-invalid{{/if}}" id="password"
+                    name="password">
+                {{#if password}}
+                    <div class="invalid-feedback">
+                        {{password}}
+                    </div>
+                {{/if}}
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>

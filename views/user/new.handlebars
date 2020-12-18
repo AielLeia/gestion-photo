@@ -1,0 +1,30 @@
+<h1>Postée une nouvelle photo</h1>
+<form action="" method="post" enctype="multipart/form-data">
+    <div class="form-row mb-4">
+        <div class="col-md-12">
+            <label for="title">Titre</label>
+            <input type="text" name="title" id="title" class="form-control">
+        </div>
+    </div>
+    <div class="form-row mb-4">
+        <div class="col-md-4">
+            <label for="categories">Catégories</label>
+            <select class="form-control" name="categories" id="categories"></select>
+        </div>
+        <div class="col-md-4">
+            <label for="virtualFolders">Dossier</label>
+            <select class="form-control" name="virtualFolders" id="virtualFolders"></select>
+        </div>
+        <div class="col-md-4">
+            <label for="fileName">Fichier</label>
+            <input class="form-control" type="file" name="fileName" id="fileName">
+        </div>
+    </div>
+    <div class="form-row mb-4">
+        <div class="col-md-12">
+            <label for="description">Description</label>
+            <textarea class="form-control" name="description" id="description" rows="10"></textarea>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary mb-4">Postée la photo</button>
+</form>
